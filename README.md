@@ -25,7 +25,7 @@ Sample example of JSON data object:
 ```
 
 ## Requirements:
-There is a tiny `Hospital Management System` and for this problem its scope is limited to just maintaining hospital staff and patient details into database.
+There is a tiny `Hospital Management System` and for this problem its scope is limited to just maintaining hospital staff and patient details in the database.
 
 Following architectural components for this application have already been provide as a standard Java classes:
 * `Controller`: controller class where you have to define REST endpoints for POST and GET methods
@@ -37,20 +37,23 @@ Following architectural components for this application have already been provid
 Hospital staff can login into the system from their staff Id, and can see the patient details
 
 ## The task is:
-1. Fetch all patients admitted in hospital.
-2. Fetch all patients discharged from hospital.
+1. Fetch all patients admitted to the hospital.
+2. Fetch all patients discharged from the hospital.
 
 ## Assumption:
-1. All doctors available in Staff System is available.
+1. All doctors available in Staff System are available.
 2. A patient can be admitted under one doctor at a time, but a doctor can treat many patients at the same time i.e. One to Many relationship mapping.
 
 ## Corner Cases handled:
-1. Doctor appointed to a patient should be a registered doctor into our system.
+1. Doctor appointed to a patient should be a registered doctor in our system.
 2. Discharge is possible for patients already in Admitted State.
-3. Duplicate records and null records not allowed. 
-4. Patient already present in database in discharged state, can get admitted again by updating the existing record, no need to register again.
+3. Duplicate records and null records are not allowed. 
+4. Patients already present in the database in discharged state, can get admitted again by updating the existing record, no need to register again.
 5. Mark room available, only if any already admitted patient is not there. 
 
+## What more we can improve:
+1. Adding details regarding reports of patients, like disease, treatment, doctor advice, etc.
+2. Booking the slots for the doctor’s next appointment.
 
 The project by default supports the use of the H2 database. So that you can directly run the testcases and test the result.
 
